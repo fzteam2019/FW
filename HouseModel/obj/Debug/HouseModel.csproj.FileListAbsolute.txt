@@ -1,0 +1,30 @@
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseModel\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseModel\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseModel\obj\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseModel\obj\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseModel\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseModel\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseModel\obj\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseModel\obj\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseModel\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseModel\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseModel\obj\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseModel\obj\Debug\HouseModel.pdb
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseModel\bin\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseModel\bin\Debug\HouseModel.pdb
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseModel\obj\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseModel\obj\Debug\HouseModel.pdb
+E:\ASP,NET\第七章\sourceCode\HouseModel\bin\Debug\HouseModel.dll
+E:\ASP,NET\第七章\sourceCode\HouseModel\bin\Debug\HouseModel.pdb
+E:\ASP,NET\第七章\sourceCode\HouseModel\obj\Debug\HouseModel.dll
+E:\ASP,NET\第七章\sourceCode\HouseModel\obj\Debug\HouseModel.pdb
+E:\ASP,NET\第七章\sourceCode\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache
+F:\C#\ASP,NET WebSite\House\HouseModel\bin\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\House\HouseModel\bin\Debug\HouseModel.pdb
+F:\C#\ASP,NET WebSite\House\HouseModel\obj\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\House\HouseModel\obj\Debug\HouseModel.pdb
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\bin\Debug\HouseModel.dll
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\bin\Debug\HouseModel.pdb
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\obj\Debug\HouseModel.dll
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\obj\Debug\HouseModel.pdb

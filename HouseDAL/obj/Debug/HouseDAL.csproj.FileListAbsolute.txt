@@ -1,0 +1,49 @@
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\bin\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\bin\Debug\HouseDAL.pdb
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\obj\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\obj\Debug\HouseDAL.pdb
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\学生用书\ASP.NET MVC\Chapter07\代码\HouseRent\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\bin\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\bin\Debug\HouseDAL.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\obj\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\02 上机练习参考答案\HouseRent\HouseDAL\obj\Debug\HouseDAL.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\bin\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\bin\Debug\HouseDAL.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\bin\Debug\HouseModel.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\bin\Debug\HouseModel.pdb
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\obj\Debug\HouseDAL.dll
+G:\课件开发\ACCP7.0\PPT\ASP.NET MVC\Chapter07\03 提供给学员的上机练习素材\sourceCode\HouseDAL\obj\Debug\HouseDAL.pdb
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.dll
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.pdb
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\bin\Debug\HouseDAL.dll
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\bin\Debug\HouseDAL.pdb
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\bin\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\第七章\sourceCode\HouseDAL\bin\Debug\HouseModel.pdb
+E:\ASP,NET\第七章\sourceCode\HouseDAL\bin\Debug\HouseDAL.dll
+E:\ASP,NET\第七章\sourceCode\HouseDAL\bin\Debug\HouseDAL.pdb
+E:\ASP,NET\第七章\sourceCode\HouseDAL\bin\Debug\HouseModel.dll
+E:\ASP,NET\第七章\sourceCode\HouseDAL\bin\Debug\HouseModel.pdb
+E:\ASP,NET\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+E:\ASP,NET\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.dll
+E:\ASP,NET\第七章\sourceCode\HouseDAL\obj\Debug\HouseDAL.pdb
+F:\C#\ASP,NET WebSite\House\HouseDAL\bin\Debug\HouseDAL.dll
+F:\C#\ASP,NET WebSite\House\HouseDAL\bin\Debug\HouseDAL.pdb
+F:\C#\ASP,NET WebSite\House\HouseDAL\bin\Debug\HouseModel.dll
+F:\C#\ASP,NET WebSite\House\HouseDAL\bin\Debug\HouseModel.pdb
+F:\C#\ASP,NET WebSite\House\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+F:\C#\ASP,NET WebSite\House\HouseDAL\obj\Debug\HouseDAL.dll
+F:\C#\ASP,NET WebSite\House\HouseDAL\obj\Debug\HouseDAL.pdb
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\bin\Debug\HouseDAL.dll
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\bin\Debug\HouseDAL.pdb
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\bin\Debug\HouseModel.dll
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\bin\Debug\HouseModel.pdb
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.dll
+E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.pdb
