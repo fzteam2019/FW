@@ -49,6 +49,9 @@ namespace Houses.BLL
             return false;
         }
 
+        public List<User> UserList(string userName) {
+            return  dal.GetList(userName);
+        }
 		#endregion  Method
 	}
 }

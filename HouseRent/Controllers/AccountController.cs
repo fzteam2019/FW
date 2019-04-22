@@ -71,5 +71,14 @@ namespace HouseRent.Controllers
             return RedirectToAction("Login");
         }
 
+        public JsonResult GetUserList(string userName)
+        {
+            List<User> list = new UserManager().UserList(userName);
+            return Json(list);
+        }
+
+        public ActionResult UserList() {
+            return View();
+        }
     }
 }
