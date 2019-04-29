@@ -173,7 +173,6 @@ E:\Source\FW\HouseRent\bin\System.Net.Http.Formatting.dll
 E:\Source\FW\HouseRent\bin\System.Web.Helpers.dll
 E:\Source\FW\HouseRent\bin\System.Web.Http.dll
 E:\Source\FW\HouseRent\bin\System.Web.Http.WebHost.dll
-E:\Source\FW\HouseRent\bin\System.Web.Mvc.dll
 E:\Source\FW\HouseRent\bin\System.Web.Razor.dll
 E:\Source\FW\HouseRent\bin\System.Web.WebPages.Deployment.dll
 E:\Source\FW\HouseRent\bin\System.Web.WebPages.dll
@@ -201,8 +200,6 @@ E:\Source\FW\HouseRent\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\Source\FW\HouseRent\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\Source\FW\HouseRent\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\Source\FW\HouseRent\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\Source\FW\HouseRent\obj\Debug\HouseRent.csprojAssemblyReference.cache
-E:\Source\FW\HouseRent\obj\Debug\HouseRent.csproj.CoreCompileInputs.cache
-E:\Source\FW\HouseRent\obj\Debug\HouseRent.csproj.CopyComplete
 E:\Source\FW\HouseRent\obj\Debug\HouseRent.dll
 E:\Source\FW\HouseRent\obj\Debug\HouseRent.pdb
+E:\Source\FW\HouseRent\obj\Debug\HouseRent.csprojResolveAssemblyReference.cache
