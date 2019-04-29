@@ -61,14 +61,3 @@ E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseBLL\bin\De
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseBLL\obj\Debug\HouseBLL.csprojResolveAssemblyReference.cache
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseBLL\obj\Debug\HouseBLL.dll
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseBLL\obj\Debug\HouseBLL.pdb
-E:\Source\FW\HouseBLL\bin\Debug\HouseBLL.dll
-E:\Source\FW\HouseBLL\bin\Debug\HouseBLL.pdb
-E:\Source\FW\HouseBLL\bin\Debug\HouseDAL.dll
-E:\Source\FW\HouseBLL\bin\Debug\HouseModel.dll
-E:\Source\FW\HouseBLL\bin\Debug\HouseDAL.pdb
-E:\Source\FW\HouseBLL\bin\Debug\HouseModel.pdb
-E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.csprojAssemblyReference.cache
-E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.csproj.CoreCompileInputs.cache
-E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.csproj.CopyComplete
-E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.dll
-E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.pdb

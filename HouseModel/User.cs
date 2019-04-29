@@ -18,7 +18,6 @@ namespace Houses.Model
 		private string _username;
 		private string _password;
 		private string _telephone;
-        private int _ruletype;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -74,16 +73,8 @@ namespace Houses.Model
 			set{ _telephone=value;}
 			get{return _telephone;}
 		}
+		#endregion Model
 
-        [DisplayName("½ÇÉ«")]
-        public int RuleType
-
-        {
-            set { _ruletype = value; }
-            get { return _ruletype; }
-        }
-        #endregion Model
-
-    }
+	}
 }
 
