@@ -47,3 +47,10 @@ E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\bin\De
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.dll
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseDAL\obj\Debug\HouseDAL.pdb
+E:\Source\FW\HouseDAL\bin\Debug\HouseDAL.dll
+E:\Source\FW\HouseDAL\bin\Debug\HouseDAL.pdb
+E:\Source\FW\HouseDAL\bin\Debug\HouseModel.dll
+E:\Source\FW\HouseDAL\bin\Debug\HouseModel.pdb
+E:\Source\FW\HouseDAL\obj\Debug\HouseDAL.csprojResolveAssemblyReference.cache
+E:\Source\FW\HouseDAL\obj\Debug\HouseDAL.dll
+E:\Source\FW\HouseDAL\obj\Debug\HouseDAL.pdb

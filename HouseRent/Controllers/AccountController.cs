@@ -71,5 +71,9 @@ namespace HouseRent.Controllers
             return RedirectToAction("Login");
         }
 
+        public ActionResult UserList() {
+            return View();
+        }
+
     }
 }
