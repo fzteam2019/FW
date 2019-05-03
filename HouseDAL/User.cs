@@ -216,6 +216,9 @@ namespace Houses.DAL
             model.UserName = dr["UserName"].ToString();
             model.Password = dr["Password"].ToString();
             model.Telephone = dr["Telephone"].ToString();
+            int ruleType = 0;
+            int.TryParse(dr["RuleType"] ==null?"": dr["RuleType"].ToString(), out ruleType);
+            model.RuleType = ruleType;
             return model;
 
         }
@@ -223,15 +226,23 @@ namespace Houses.DAL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<User> GetList(string userName)
+        public List<User> GetList(string userName, int currentPage, int pageSize)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select LoginId,LoginName,UserName,Password,Telephone ");
-            strSql.Append(" FROM User where UserName like '%@UserName%'");
+            strSql.Append("select Top " +pageSize+ " * FROM [User] where LoginId not in (Select  Top "+ (currentPage-1)*pageSize + " LoginId FROM [User] ");
+            if (!string.IsNullOrEmpty(userName))
+            {
+                strSql.Append(" where LoginName like '%" + userName + "%') and");
+                strSql.Append(" LoginName like '%" + userName + "%'");
+            }
+            else {
+                strSql.Append(')');
+            }
+            strSql.Append(" order by LoginId asc ");
             SqlParameter[] parameters = {
-               new SqlParameter("@UserName", SqlDbType.NVarChar,10),
+              // new SqlParameter("@LoginName", SqlDbType.NVarChar,10),
             };
-            parameters[0].Value = userName;
+           // parameters[0].Value = userName;
             User model = new User();
             DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
             if (ds.Tables[0].Rows.Count > 0)

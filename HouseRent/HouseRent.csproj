@@ -15,7 +15,7 @@
     <AssemblyName>HouseRent</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -132,7 +132,16 @@
     <Content Include="Images\logo.gif" />
     <Content Include="Images\selector_arrow.gif" />
     <Content Include="Images\thumb_house.gif" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Script\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="Script\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="Script\bootstrap-3.3.7-dist\js\npm.js" />
     <Content Include="Script\jquery-1.7.2.min.js" />
+    <Content Include="Script\jquery.min.js" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Account\UserList.aspx" />
@@ -170,6 +179,16 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Views\Web.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -188,7 +207,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:7824/</IISUrl>
+          <IISUrl>http://localhost:8090</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

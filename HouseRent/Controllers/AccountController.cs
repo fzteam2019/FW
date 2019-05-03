@@ -30,7 +30,14 @@ namespace HouseRent.Controllers
                 if (new UserManager().Login(user, out user))
                 {
                     Session["admin"] = user;
-                    return Redirect("~/Admin");
+                    if (user.LoginName == "admin")
+                    {
+                        return Redirect("Account/UserList");
+                    }
+                    else
+                    {
+                        return Redirect("~/Admin");
+                    }
                 }
                 else
                 {
@@ -69,6 +76,11 @@ namespace HouseRent.Controllers
         {
             Session["admin"] = null;
             return RedirectToAction("Login");
+        }
+
+        public JsonResult GetUserList(int currentPage, int pageSize) {
+            var list = new UserManager().UserList("", currentPage, pageSize);
+            return Json(list);
         }
 
         public ActionResult UserList() {

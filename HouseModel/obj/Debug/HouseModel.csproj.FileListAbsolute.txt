@@ -32,3 +32,4 @@ E:\Source\FW\HouseModel\bin\Debug\HouseModel.dll
 E:\Source\FW\HouseModel\bin\Debug\HouseModel.pdb
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.dll
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.pdb
+E:\Source\FW\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache

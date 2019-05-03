@@ -49,8 +49,8 @@ namespace Houses.BLL
             return false;
         }
 
-        public List<User> UserList(string userName) {
-            return  dal.GetList(userName);
+        public List<User> UserList(string userName, int currentPage, int pageSize) {
+            return dal.GetList(userName, currentPage, pageSize);
         }
 		#endregion  Method
 	}

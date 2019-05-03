@@ -18,10 +18,12 @@ namespace Houses.Model
 		private string _username;
 		private string _password;
 		private string _telephone;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int LoginId
+
+        private int _ruletype;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int LoginId
 		{
 			set{ _loginid=value;}
 			get{return _loginid;}
@@ -73,8 +75,18 @@ namespace Houses.Model
 			set{ _telephone=value;}
 			get{return _telephone;}
 		}
-		#endregion Model
 
-	}
+        /// <summary>
+		/// 
+		/// </summary>
+        [DisplayName("½ÇÉ«")]
+        public int RuleType
+        {
+            set { _ruletype = value; }
+            get { return _ruletype; }
+        }
+        #endregion Model
+
+    }
 }
 
