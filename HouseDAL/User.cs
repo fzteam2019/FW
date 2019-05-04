@@ -47,20 +47,21 @@ namespace Houses.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into [User](");
-            strSql.Append("LoginName,UserName,Password,Telephone)");
+            strSql.Append("LoginName,UserName,Password,Telephone,RuleType)");
             strSql.Append(" values (");
-            strSql.Append("@LoginName,@UserName,@Password,@Telephone)");
+            strSql.Append("@LoginName,@UserName,@Password,@Telephone,@RuleType)");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
                     new SqlParameter("@LoginName", SqlDbType.NVarChar,20),
                     new SqlParameter("@UserName", SqlDbType.NVarChar,10),
                     new SqlParameter("@Password", SqlDbType.NVarChar,50),
-                    new SqlParameter("@Telephone", SqlDbType.NVarChar,20)};
+                    new SqlParameter("@Telephone", SqlDbType.NVarChar,20),
+                    new SqlParameter("@RuleType", SqlDbType.Int,4)};
             parameters[0].Value = model.LoginName;
             parameters[1].Value = model.UserName;
             parameters[2].Value = model.Password;
             parameters[3].Value = model.Telephone;
-
+            parameters[4].Value = model.RuleType;
             object obj = SqlHelper.ExecuteScalar(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
             if (obj == null)
             {
@@ -71,83 +72,86 @@ namespace Houses.DAL
                 return Convert.ToInt32(obj);
             }
         }
-//        /// <summary>
-//        /// 更新一条数据
-//        /// </summary>
-//        public bool Update(bdqn.houses.Model.User model)
-//        {
-//            StringBuilder strSql=new StringBuilder();
-//            strSql.Append("update User set ");
-//            strSql.Append("LoginName=@LoginName,");
-//            strSql.Append("UserName=@UserName,");
-//            strSql.Append("Password=@Password,");
-//            strSql.Append("Telephone=@Telephone");
-//            strSql.Append(" where LoginId=@LoginId");
-//            SqlParameter[] parameters = {
-//                    new SqlParameter("@LoginId", SqlDbType.Int,4),
-//                    new SqlParameter("@LoginName", SqlDbType.NVarChar,20),
-//                    new SqlParameter("@UserName", SqlDbType.NVarChar,10),
-//                    new SqlParameter("@Password", SqlDbType.NVarChar,50),
-//                    new SqlParameter("@Telephone", SqlDbType.NVarChar,20)};
-//            parameters[0].Value = model.LoginId;
-//            parameters[1].Value = model.LoginName;
-//            parameters[2].Value = model.UserName;
-//            parameters[3].Value = model.Password;
-//            parameters[4].Value = model.Telephone;
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public bool Update(User model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update [User] set ");
+            strSql.Append("LoginName=@LoginName,");
+            strSql.Append("UserName=@UserName,");
+            strSql.Append("Password=@Password,");
+            strSql.Append("Telephone=@Telephone,");
+            strSql.Append("RuleType=@RuleType");
+            strSql.Append(" where LoginId=@LoginId");
+            SqlParameter[] parameters = {
+                    new SqlParameter("@LoginId", SqlDbType.Int,4),
+                    new SqlParameter("@LoginName", SqlDbType.NVarChar,20),
+                    new SqlParameter("@UserName", SqlDbType.NVarChar,10),
+                    new SqlParameter("@Password", SqlDbType.NVarChar,50),
+                    new SqlParameter("@Telephone", SqlDbType.NVarChar,20),
+                    new SqlParameter("@RuleType", SqlDbType.Int,4)
+            };
+            parameters[0].Value = model.LoginId;
+            parameters[1].Value = model.LoginName;
+            parameters[2].Value = model.UserName;
+            parameters[3].Value = model.Password;
+            parameters[4].Value = model.Telephone;
+            parameters[5].Value = model.RuleType;
+            int rows = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-//            int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
-//            if (rows > 0)
-//            {
-//                return true;
-//            }
-//            else
-//            {
-//                return false;
-//            }
-//        }
+        //        /// <summary>
+        //        /// 删除一条数据
+        //        /// </summary>
+        //        public bool Delete(int LoginId)
+        //        {
 
-//        /// <summary>
-//        /// 删除一条数据
-//        /// </summary>
-//        public bool Delete(int LoginId)
-//        {
-			
-//            StringBuilder strSql=new StringBuilder();
-//            strSql.Append("delete from User ");
-//            strSql.Append(" where LoginId=@LoginId");
-//            SqlParameter[] parameters = {
-//                    new SqlParameter("@LoginId", SqlDbType.Int,4)
-//};
-//            parameters[0].Value = LoginId;
+        //            StringBuilder strSql=new StringBuilder();
+        //            strSql.Append("delete from User ");
+        //            strSql.Append(" where LoginId=@LoginId");
+        //            SqlParameter[] parameters = {
+        //                    new SqlParameter("@LoginId", SqlDbType.Int,4)
+        //};
+        //            parameters[0].Value = LoginId;
 
-//            int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
-//            if (rows > 0)
-//            {
-//                return true;
-//            }
-//            else
-//            {
-//                return false;
-//            }
-//        }
-//        /// <summary>
-//        /// 删除一条数据
-//        /// </summary>
-//        public bool DeleteList(string LoginIdlist )
-//        {
-//            StringBuilder strSql=new StringBuilder();
-//            strSql.Append("delete from User ");
-//            strSql.Append(" where LoginId in ("+LoginIdlist + ")  ");
-//            int rows=DbHelperSQL.ExecuteSql(strSql.ToString());
-//            if (rows > 0)
-//            {
-//                return true;
-//            }
-//            else
-//            {
-//                return false;
-//            }
-//        }
+        //            int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
+        //            if (rows > 0)
+        //            {
+        //                return true;
+        //            }
+        //            else
+        //            {
+        //                return false;
+        //            }
+        //        }
+        //        /// <summary>
+        //        /// 删除一条数据
+        //        /// </summary>
+        //        public bool DeleteList(string LoginIdlist )
+        //        {
+        //            StringBuilder strSql=new StringBuilder();
+        //            strSql.Append("delete from User ");
+        //            strSql.Append(" where LoginId in ("+LoginIdlist + ")  ");
+        //            int rows=DbHelperSQL.ExecuteSql(strSql.ToString());
+        //            if (rows > 0)
+        //            {
+        //                return true;
+        //            }
+        //            else
+        //            {
+        //                return false;
+        //            }
+        //        }
 
 
         /// <summary>
@@ -157,7 +161,7 @@ namespace Houses.DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 LoginId,LoginName,UserName,Password,Telephone from [User] ");
+            strSql.Append("select  top 1 LoginId,LoginName,UserName,Password,Telephone,RuleType from [User] ");
             strSql.Append(" where LoginName=@LoginName");
             SqlParameter[] parameters = {
                     new SqlParameter("@LoginName", SqlDbType.NVarChar,20)
@@ -184,7 +188,7 @@ namespace Houses.DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 LoginId,LoginName,UserName,Password,Telephone from [User] ");
+            strSql.Append("select  top 1 LoginId,LoginName,UserName,Password,Telephone,RuleType from [User] ");
             strSql.Append(" where LoginId=@LoginId");  
             SqlParameter[] parameters = {
                     new SqlParameter("@LoginId", SqlDbType.Int,4)
@@ -259,6 +263,18 @@ namespace Houses.DAL
             }
         }
 
+
+        public bool Delete(int id) {
+            string sql = "delete from [User] where LoginId=" + id;
+            int result = SqlHelper.ExecuteNonQuery(SqlHelper.ConnectionString, CommandType.Text, sql.ToString());
+            if (result > 0)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
         //        /// <summary>
         //        /// 获得前几行数据
         //        /// </summary>

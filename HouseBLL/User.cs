@@ -6,21 +6,21 @@ using Houses.Model;
 
 namespace Houses.BLL
 {
-  
-	/// <summary>
-	/// User
-	/// </summary>
-	public partial class UserManager
-	{
-        static object userLock=new object();
+
+    /// <summary>
+    /// User
+    /// </summary>
+    public partial class UserManager
+    {
+        static object userLock = new object();
         private readonly UserService dal = new UserService();
         public UserManager()
-		{}
-		#region  Method
+        { }
+        #region  Method
 
         public bool Login(User user, out User gettedUser)
         {
-             gettedUser = dal.GetModel(user.LoginName);
+            gettedUser = dal.GetModel(user.LoginName);
             if (gettedUser != null && gettedUser.Password == user.Password)
             {
                 return true;
@@ -33,26 +33,38 @@ namespace Houses.BLL
 
         public bool Register(User user)
         {
-            lock(userLock)
+            lock (userLock)
             {
-                if (dal.Exists(user.LoginName))//用户是否存在
-                {
-                    return false;
+                //if (dal.Exists(user.LoginName))//用户是否存在
+                //{
+                //    return false;
 
-                }
-                else
-                {
-                    if (dal.Add(user) > 0)//添加用户成功
-                        return true;
-                }
+                //}
+                //else
+                //{
+                if (dal.Add(user) > 0)//添加用户成功
+                    return true;
+                //}
             }
             return false;
+        }
+
+        public bool Update(User user) {
+            return dal.Update(user);
         }
 
         public List<User> UserList(string userName, int currentPage, int pageSize) {
             return dal.GetList(userName, currentPage, pageSize);
         }
-		#endregion  Method
-	}
+
+        public User GetSingleUser(int id) {
+            return dal.GetModel(id);
+        }
+
+        public bool Delete(int id) {
+            return dal.Delete(id);
+        }
+        #endregion  Method
+    }
 }
 

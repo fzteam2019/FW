@@ -14,6 +14,7 @@
         </div>
     </div>
     <div>
+        <button type="button" style="margin-top: 20px;margin-left: 70%;" class="btn btn-info btn-sm" onclick="Add()">添加</button> 
         <div id="list" style="width: 60%;margin: 0 auto;margin-top: 50px;">
         </div>
         <ul class="pager" style="float: right;width: 60%;">
@@ -72,15 +73,12 @@
 	                    <div class="form-group">
                             <label for="lastname" class="col-sm-3 control-label">用户角色</label>
 		                    <div class="col-sm-5">
-			                   <button type="button" class="btn btn-default dropdown-toggle" 
-			                            data-toggle="dropdown">
-		                            ==请选择== <span class="caret"></span>
-	                            </button>
-	                            <ul class="dropdown-menu" role="menu">
-		                            <li><a href="#">游客</a></li>
-                                    <li><a href="#">房东</a></li>
-		                            <li><a href="#">管理员</a></li>
-	                            </ul>
+			                   <select class="form-control" id="rule_type" >
+                                    <option value="0">游客</option>
+                                    <option value="1">管理员</option>
+                                    <option value="2">房东</option>          
+                                </select>
+
 		                    </div>
 	                    </div>
                     </form>
@@ -105,6 +103,7 @@
         GLOBAL_DATA.currentPage = 1;
         GLOBAL_DATA.pageSize = 10;
         GLOBAL_DATA.editObject = '';
+        GLOBAL_DATA.DialogType = 1;
         var RULE_TYPE = {0:"游客",1:"管理员",2:"房东"};
         $(function () {
             GetData();
@@ -162,17 +161,60 @@
         }
 
         function Edit(val) {
+            GLOBAL_DATA.DialogType = 1;
             GLOBAL_DATA.editObject = val;
+            $.get("/Account/GetUser?id="+val, function (data) {
+                $('#login_name').val(data.LoginName);
+                $('#user_name').val(data.UserName);
+                $('#password').val(data.Password);
+                $('#password_c').val(data.Password);
+                $('#telephone').val(data.Telephone);
+                $("#rule_type").val(data.RuleType);
+            });
             $('#myModal').modal('show')
         }
 
         function Del(val) {
-            alert(val);
+            $.get("/Account/DeleteUser?id=" + val, function (data) {
+                GLOBAL_DATA.currentPage = 1;
+                GetData();
+                alert("删除成功！");
+            });
         }
 
         function Commit() {
-            $('#myModal').modal('hide')
+            if ($('#password').val() != $('#password_c').val()) {
+                alert("两次密码不一致！");
+                return false;
+            } else {                
+                var params = {}
+                params.LoginId = GLOBAL_DATA.editObject;
+                params.LoginName = $('#login_name').val();
+                params.UserName = $('#user_name').val();
+                params.Password = $('#password').val();
+                params.Telephone = $('#telephone').val();
+                params.RuleType = $("#rule_type").val();
+                params.OperationTpye = GLOBAL_DATA.DialogType;
+                $.post("/Account/Update", params, function (data) {
+                    GLOBAL_DATA.currentPage = 1;
+                    GetData();                    
+                    $('#myModal').modal('hide');
+                    alert("操作成功！");
+                });                
+            }
         }
+
+        function Add() {
+            GLOBAL_DATA.DialogType = 2;
+            $('#login_name').val("");
+            $('#user_name').val("");
+            $('#password').val("");
+            $('#password_c').val("");
+            $('#telephone').val("");
+            $("#rule_type").val("0");
+            $('#myModal').modal('show');
+        }
+
     </script>
     <style>
         .padding0 {

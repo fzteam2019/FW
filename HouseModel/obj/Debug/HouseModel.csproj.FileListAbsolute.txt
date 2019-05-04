@@ -30,6 +30,6 @@ E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\obj\
 E:\郝光明工作\工作\代码审核\8.7\第二个租房\House\HouseModel\obj\Debug\HouseModel.pdb
 E:\Source\FW\HouseModel\bin\Debug\HouseModel.dll
 E:\Source\FW\HouseModel\bin\Debug\HouseModel.pdb
+E:\Source\FW\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.dll
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.pdb
-E:\Source\FW\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache

@@ -59,6 +59,7 @@ namespace HouseRent.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.RuleType = 0;//注册用户默认游客
                 if (new UserManager().Register(user))
                 {
                     return Content("<script>alert('注册成功！');location.href='Login';</script>"); 
@@ -71,6 +72,19 @@ namespace HouseRent.Controllers
             return View(user);
         }
 
+        public void Update(User user, int OperationTpye) {
+            if (user != null) {
+                if (OperationTpye == 1)
+                {
+                    new UserManager().Update(user);
+                }
+                else if (OperationTpye == 2)
+                {
+                    new UserManager().Register(user);
+                }
+            }
+        }
+
         //退出
         public ActionResult Out()
         {
@@ -81,6 +95,15 @@ namespace HouseRent.Controllers
         public JsonResult GetUserList(int currentPage, int pageSize) {
             var list = new UserManager().UserList("", currentPage, pageSize);
             return Json(list);
+        }
+
+        public JsonResult GetUser(int id) {
+            var user = new UserManager().GetSingleUser(id);
+            return Json(user, JsonRequestBehavior.AllowGet);
+        }
+
+        public void DeleteUser(int id) {
+            var result = new UserManager().Delete(id);
         }
 
         public ActionResult UserList() {
