@@ -40,7 +40,8 @@ namespace HouseRent.Controllers
                     }
                     else
                     {
-                                            }
+                        return Redirect("~/Front");
+                    }
                 }
                 else
                 {

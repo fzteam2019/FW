@@ -107,6 +107,8 @@
   <ItemGroup>
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HouseController.cs" />
+    <Compile Include="Areas\Front\Controllers\HouseController.cs" />
+    <Compile Include="Areas\Front\FrontAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HouseController.cs" />
     <Compile Include="Global.asax.cs">
@@ -125,6 +127,8 @@
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\Street.ascx" />
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\District.ascx" />
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\HouseType.ascx" />
+    <Content Include="Areas\Front\Views\House\Detail.aspx" />
+    <Content Include="Areas\Front\Views\House\Index.aspx" />
     <Content Include="Css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\bodyback.jpg" />
@@ -210,6 +214,9 @@
   <ItemGroup>
     <Content Include="Script\webuploader\jquery插件库.url" />
     <Content Include="Script\webuploader\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Front\Views\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
