@@ -30,14 +30,17 @@ namespace HouseRent.Controllers
                 if (new UserManager().Login(user, out user))
                 {
                     Session["admin"] = user;
-                    if (user.LoginName == "admin")
+                    if (user.RuleType == 1)
                     {
                         return Redirect("Account/UserList");
                     }
+                    else if (user.RuleType == 2) {
+                        return Redirect("~/Admin");
+
+                    }
                     else
                     {
-                        return Redirect("~/Admin");
-                    }
+                                            }
                 }
                 else
                 {

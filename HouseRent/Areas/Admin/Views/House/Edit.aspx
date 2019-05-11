@@ -55,12 +55,15 @@
                 <%=Html.TextAreaFor (m=>m.Description) %>
                 <span style="color: red"><%=Html.ValidationMessageFor(m=>m.Description) %></span>
             </p>
+  
             <p style="height: 36px; width: 125px; margin: 30px 0 0 140px;">
                 <input type="submit" value="立即发布" class="buttons" />
             </p>
+
             <%Html.EndForm(); %>
         </div>
     </div>
+    <script src="../../../../Script/webuploader/webuploader.min.js"></script>
     <script type="text/javascript">
         $().ready(function () {
             $("#Street_District_Id").change(function () {
@@ -78,6 +81,16 @@
 
                 }
             });
+        });
+
+        var uploader = new WebUploader.Uploader({
+            swf: '../../../../Script/webuploader/Uploader.swf'
+
+            // 其他配置项
+        });
+
+        uploader.on('fileQueued', function (file) {
+            // do some things.
         });
     </script>
 </asp:Content>

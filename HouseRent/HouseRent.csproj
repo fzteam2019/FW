@@ -142,6 +142,24 @@
     <Content Include="Script\bootstrap-3.3.7-dist\js\npm.js" />
     <Content Include="Script\jquery-1.7.2.min.js" />
     <Content Include="Script\jquery.min.js" />
+    <Content Include="Script\webuploader\Uploader.swf" />
+    <Content Include="Script\webuploader\webuploader.css" />
+    <Content Include="Script\webuploader\webuploader.custom.js" />
+    <Content Include="Script\webuploader\webuploader.custom.min.js" />
+    <Content Include="Script\webuploader\webuploader.fis.js" />
+    <Content Include="Script\webuploader\webuploader.flashonly.js" />
+    <Content Include="Script\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Script\webuploader\webuploader.html5only.js" />
+    <Content Include="Script\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Script\webuploader\webuploader.js" />
+    <Content Include="Script\webuploader\webuploader.min.js" />
+    <Content Include="Script\webuploader\webuploader.noimage.js" />
+    <Content Include="Script\webuploader\webuploader.noimage.min.js" />
+    <Content Include="Script\webuploader\webuploader.nolog.js" />
+    <Content Include="Script\webuploader\webuploader.nolog.min.js" />
+    <Content Include="Script\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Script\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Script\webuploader\www.jq22.com.txt" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\Account\UserList.aspx" />
@@ -188,6 +206,10 @@
     <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Script\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\webuploader\jquery插件库.url" />
+    <Content Include="Script\webuploader\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
