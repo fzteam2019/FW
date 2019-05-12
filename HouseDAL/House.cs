@@ -4,6 +4,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Houses.Model;
+using System.IO;
 
 namespace Houses.DAL
 {
@@ -120,11 +121,14 @@ namespace Houses.DAL
                     Name = dr["DistrictName"].ToString(),
                 }
             };
-        //   model.DistinctId= int.Parse(dr["DistrictId"].ToString());
+            if (dr["Images"].ToString() != "")
+            {
+                model.Images = dr["Images"].ToString();
+            }
+            
+            //model.DistinctId= int.Parse(dr["DistrictId"].ToString());
            
-
             return model;
-
         }
 
 
@@ -135,9 +139,9 @@ namespace Houses.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into House(");
-            strSql.Append("Title,TypeId,Floorage,Price,StreetId,Contract,Description,PublishUser,PublishTime)");
+            strSql.Append("Title,TypeId,Floorage,Price,StreetId,Contract,Description,PublishUser,PublishTime,Images)");
             strSql.Append(" values (");
-            strSql.Append("@Title,@TypeId,@Floorage,@Price,@StreetId,@Contract,@Description,@PublishUser,@PublishTime)");
+            strSql.Append("@Title,@TypeId,@Floorage,@Price,@StreetId,@Contract,@Description,@PublishUser,@PublishTime,@Images)");
             strSql.Append(";select @@IDENTITY");
             SqlParameter[] parameters = {
                     new SqlParameter("@Title", SqlDbType.NVarChar,50),
@@ -148,7 +152,8 @@ namespace Houses.DAL
                     new SqlParameter("@Contract", SqlDbType.NVarChar,50),
                     new SqlParameter("@Description", SqlDbType.NVarChar,1000),
                     new SqlParameter("@PublishUser", SqlDbType.Int,4),
-                    new SqlParameter("@PublishTime", SqlDbType.DateTime)};
+                    new SqlParameter("@PublishTime", SqlDbType.DateTime),
+                    new SqlParameter("@Images",SqlDbType.Text)};
             parameters[0].Value = model.Title;
             parameters[1].Value = model.TypeId;
             parameters[2].Value = model.Floorage;
@@ -158,6 +163,7 @@ namespace Houses.DAL
             parameters[6].Value = model.Description??"";
             parameters[7].Value = model.PublishUserId;
             parameters[8].Value = model.PublishTime;
+            parameters[9].Value = model.Images;
 
             object obj = SqlHelper.ExecuteScalar(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
             if (obj == null)
@@ -182,7 +188,8 @@ namespace Houses.DAL
             strSql.Append("Price=@Price,");
             strSql.Append("StreetId=@StreetId,");
             strSql.Append("Contract=@Contract,");
-            strSql.Append("Description=@Description");
+            strSql.Append("Description=@Description,");
+            strSql.Append("Images=@Images");
             //strSql.Append("PublishUser=@PublishUser,");
             //strSql.Append("PublishTime=@PublishTime");
             strSql.Append(" where HouseId=@HouseId");
@@ -194,7 +201,8 @@ namespace Houses.DAL
                     new SqlParameter("@Price", SqlDbType.Decimal,9),
                     new SqlParameter("@StreetId", SqlDbType.Int,4),
                     new SqlParameter("@Contract", SqlDbType.NVarChar,50),
-                    new SqlParameter("@Description", SqlDbType.NVarChar,1000)
+                    new SqlParameter("@Description", SqlDbType.NVarChar,1000),
+                    new SqlParameter("@Images",SqlDbType.Text)
                     //new SqlParameter("@PublishUser", SqlDbType.Int,4),
                     //new SqlParameter("@PublishTime", SqlDbType.DateTime)
                                         };
@@ -205,7 +213,8 @@ namespace Houses.DAL
             parameters[4].Value = model.Price;
             parameters[5].Value = model.StreetId;
             parameters[6].Value = model.Contract;
-            parameters[7].Value = model.Description??"";
+            parameters[7].Value = model.Description??""; 
+            parameters[8].Value = model.Images;
             //parameters[8].Value = model.PublishUser;
             //parameters[9].Value = model.PublishTime;
 

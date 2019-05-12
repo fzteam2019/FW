@@ -111,6 +111,7 @@
     <Compile Include="Areas\Front\FrontAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HouseController.cs" />
+    <Compile Include="Extention\MyInputExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,6 +137,7 @@
     <Content Include="Images\logo.gif" />
     <Content Include="Images\selector_arrow.gif" />
     <Content Include="Images\thumb_house.gif" />
+    <Content Include="Script\ajaxfileupload.js" />
     <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
     <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
     <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap.css" />
@@ -179,6 +181,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Images\Images_House\" />
     <Folder Include="Models\" />
     <Folder Include="Views\House\" />
   </ItemGroup>
@@ -234,7 +237,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>43617</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:8090</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

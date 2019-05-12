@@ -10,11 +10,21 @@
             int index = 0;
             foreach (var item in Model)
             {
+                string images = item.Images;
+                string imagePath = "";
+                if (images != null && images.Length > 0)
+                {
+                    imagePath = "/"+images.Split(';')[0];
+                }
+                else
+                {
+                    imagePath = "/Images/thumb_house.gif";
+                }
              %>
         <tr <%if(index%2==0) {%>class="odd"<%} %>>
             <td class="house-thumb">
                 <dl>
-                    <dt><span><img src="<%=Url.Content("~/Images/thumb_house.gif") %>"/></span></dt>
+                    <dt><span><img src="<%=Url.Content("~"+imagePath) %>"/></span></dt>
                     <dd><a href="#"><%=item.Title %></a></dd>
                     <dd><%=item.Street.District.Name %>区<%=item.Street.Name %>，<%=item.Floorage %>平米</dd>
                     <dd>联系方式：<%=item.Contract %></dd>
@@ -43,4 +53,10 @@
             }
         }
     </script>
+    <style>
+        img{
+            width:100px;
+            height:75px;
+        }
+    </style>
 </asp:Content>

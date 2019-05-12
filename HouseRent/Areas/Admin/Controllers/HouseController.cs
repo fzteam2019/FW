@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Houses.BLL;
 using Houses.Model;
+using System.Text;
+using System.IO;
 
 namespace HouseRent.Areas.Admin.Controllers
 {
@@ -73,6 +75,56 @@ namespace HouseRent.Areas.Admin.Controllers
             return View(house);
         }
 
+        [HttpPost]
+        public ActionResult Upload()
+        {
+            StringBuilder info = new StringBuilder();
+            String baseDir = Server.MapPath("~/Images/Images_House");
+            for (int i =0;i<Request.Files.Count;i++)
+            {
+                HttpPostedFileBase postFile = Request.Files[i];//get post file 
+                if (postFile.ContentLength == 0)
+                    continue;
+                if (!Directory.Exists(baseDir))
+                    Directory.CreateDirectory(baseDir);
+                string extension = Path.GetExtension(postFile.FileName);
+                string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(postFile.FileName);
+                string newFileName = Guid.NewGuid().ToString() + extension;
+                var savePath = Path.Combine(baseDir, newFileName);
+                postFile.SaveAs(savePath);
+                string showPath = "Images/Images_House/" + newFileName;
+                info.Append(showPath + ";");
+                
+            }
+            return Content(info.ToString());
+        }
+
+        [HttpPost]
+        public ActionResult Upload11()
+        {
+            if (Request.Files.Count>0)
+            {
+                string extension = string.Empty;
+                HttpPostedFileBase file = Request.Files[0] as HttpPostedFileBase;
+                
+                if (file.FileName.Length > 0)
+                {
+                    if (file.FileName.IndexOf('.') > -1)
+                    {
+                        //创建路径
+                        string baseDir = Server.MapPath("~" + "Images/Images_House/");
+                        if (!Directory.Exists(baseDir))
+                            Directory.CreateDirectory(baseDir);
+                        if (file.FileName.ToString() != "")
+                        {
+                            var pathLast = Path.Combine(baseDir, file.FileName);
+                            file.SaveAs(pathLast);
+                        }
+                    }
+                }
+            }
+            return Content("success");
+        }
 
     }
 }

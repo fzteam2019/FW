@@ -23,6 +23,7 @@ namespace Houses.Model
 		private string _description;
 		private int _publishuser;
 		private DateTime _publishtime= DateTime.Now;
+        private string _images;
 
         
         public HouseType HouseType{get;set;}
@@ -118,6 +119,15 @@ namespace Houses.Model
 			set{ _publishtime=value;}
 			get{return DateTime.Now;}
 		}
+
+        /// <summary>
+        /// ͼƬ
+        /// </summary>
+        public string Images
+        {
+            set { _images = value; }
+            get { return _images; }
+        }
 		#endregion Model
 
 	}
