@@ -33,3 +33,7 @@ E:\Source\FW\HouseModel\bin\Debug\HouseModel.pdb
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.csprojResolveAssemblyReference.cache
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.dll
 E:\Source\FW\HouseModel\obj\Debug\HouseModel.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseModel\bin\Debug\HouseModel.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseModel\bin\Debug\HouseModel.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseModel\obj\Debug\HouseModel.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseModel\obj\Debug\HouseModel.pdb

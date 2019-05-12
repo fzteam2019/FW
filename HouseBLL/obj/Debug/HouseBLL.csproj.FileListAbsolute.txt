@@ -70,3 +70,12 @@ E:\Source\FW\HouseBLL\bin\Debug\HouseModel.pdb
 E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.csprojResolveAssemblyReference.cache
 E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.dll
 E:\Source\FW\HouseBLL\obj\Debug\HouseBLL.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseBLL.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseBLL.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseDAL.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseModel.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseDAL.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\bin\Debug\HouseModel.pdb
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\obj\Debug\HouseBLL.csprojResolveAssemblyReference.cache
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\obj\Debug\HouseBLL.dll
+E:\Workspaces\GitHubClone\fzteam2019\FW\HouseBLL\obj\Debug\HouseBLL.pdb
