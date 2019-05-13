@@ -19,7 +19,7 @@
             {
              %>
         <div class="menu">
-            <%=Html.ActionLink("发布房屋信息","Edit","House",null,new{ @class="btn"} )%>
+            <%=Html.ActionLink("发布房屋信息","Edit","House",null,new{area="Admin", @class="btn"} )%>
             <a href="<%=Url.Content("~/Account/Out") %>" class="btn">退出</a>
         </div>
         <%} %>

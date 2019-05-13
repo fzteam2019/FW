@@ -32,7 +32,7 @@
             </td>
             <td class="house-type">
                 <label class="ui-green">
-                    <input type="button" value="修改" onclick="location.href='<%=Url.Action("Edit","House",new { id=item.HouseId })%>'"/>
+                    <input type="button" value="修改" onclick="location.href='<%=Url.Action("Edit","House",new {area="Admin", id=item.HouseId })%>'"/>
                 </label>
             </td>
             <td class="house-price">

@@ -181,6 +181,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Front\Views\HouseFront\" />
     <Folder Include="Images\Images_House\" />
     <Folder Include="Models\" />
     <Folder Include="Views\House\" />

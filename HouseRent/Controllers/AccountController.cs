@@ -35,12 +35,12 @@ namespace HouseRent.Controllers
                         return Redirect("Account/UserList");
                     }
                     else if (user.RuleType == 2) {
-                        return Redirect("~/Admin");
+                        return RedirectToAction("index", "House", new { area = "Admin" });
 
                     }
                     else
                     {
-                        return Redirect("~/Front");
+                        return RedirectToAction("index", "House", new { area = "Front" });
                     }
                 }
                 else
