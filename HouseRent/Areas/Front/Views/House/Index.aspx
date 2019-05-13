@@ -9,10 +9,22 @@
 <div class="maincontent">
 <div class="list-content" id="list-content">
 
+
+
     <%
     int index = 0;
     foreach (var item in Model)
     {
+        string images = item.Images;
+        string imagePath = "";
+        if (images != null && images.Length > 0)
+        {
+            imagePath = "/" + images.Split(';')[0];
+        }
+        else
+        {
+            imagePath = "/Images/thumb_house.gif";
+        }
     %>
     <div class="zu-itemmod" link="https://fz.zu.anjuke.com/fangyuan/1311021141" _soj="Filter_1&amp;hfilter=filterlist">
     <a data-company=""
@@ -23,7 +35,7 @@
         target="_blank"
         hidefocus="true">
         <img class="thumbnail"
-                src="https://pic1.ajkimg.com/display/9a39bb9ea42ad5c4ef19b0a140e6d1ef/220x164.jpg"
+                src="<%= imagePath %>"
                 alt="<%= item.Title %>"
                 width="180"
                 height="135"
@@ -67,7 +79,7 @@
     <div class="item-info"></div>
 </div>
 </div>
-
+   
 <style>
     .maincontent .list-content {
         float: left;

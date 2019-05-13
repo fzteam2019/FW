@@ -132,11 +132,15 @@
     <Content Include="Areas\Front\Views\House\Index.aspx" />
     <Content Include="Css\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ban_next_24.png" />
+    <Content Include="Images\ban_pre_24.png" />
     <Content Include="Images\bodyback.jpg" />
     <Content Include="Images\btn_bg.gif" />
     <Content Include="Images\logo.gif" />
+    <Content Include="Images\logo.png" />
     <Content Include="Images\selector_arrow.gif" />
     <Content Include="Images\thumb_house.gif" />
+    <Content Include="Images\安居客600x450c.jpg" />
     <Content Include="Script\ajaxfileupload.js" />
     <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
     <Content Include="Script\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />

@@ -94,37 +94,36 @@ namespace HouseRent.Areas.Admin.Controllers
                 postFile.SaveAs(savePath);
                 string showPath = "Images/Images_House/" + newFileName;
                 info.Append(showPath + ";");
-                
             }
             return Content(info.ToString());
         }
 
-        [HttpPost]
-        public ActionResult Upload11()
-        {
-            if (Request.Files.Count>0)
-            {
-                string extension = string.Empty;
-                HttpPostedFileBase file = Request.Files[0] as HttpPostedFileBase;
+        //[HttpPost]
+        //public ActionResult Upload11()
+        //{
+        //    if (Request.Files.Count>0)
+        //    {
+        //        string extension = string.Empty;
+        //        HttpPostedFileBase file = Request.Files[0] as HttpPostedFileBase;
                 
-                if (file.FileName.Length > 0)
-                {
-                    if (file.FileName.IndexOf('.') > -1)
-                    {
-                        //创建路径
-                        string baseDir = Server.MapPath("~" + "Images/Images_House/");
-                        if (!Directory.Exists(baseDir))
-                            Directory.CreateDirectory(baseDir);
-                        if (file.FileName.ToString() != "")
-                        {
-                            var pathLast = Path.Combine(baseDir, file.FileName);
-                            file.SaveAs(pathLast);
-                        }
-                    }
-                }
-            }
-            return Content("success");
-        }
+        //        if (file.FileName.Length > 0)
+        //        {
+        //            if (file.FileName.IndexOf('.') > -1)
+        //            {
+        //                //创建路径
+        //                string baseDir = Server.MapPath("~" + "Images/Images_House/");
+        //                if (!Directory.Exists(baseDir))
+        //                    Directory.CreateDirectory(baseDir);
+        //                if (file.FileName.ToString() != "")
+        //                {
+        //                    var pathLast = Path.Combine(baseDir, file.FileName);
+        //                    file.SaveAs(pathLast);
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return Content("success");
+        //}
 
     }
 }

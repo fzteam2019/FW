@@ -1,10 +1,178 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Detail
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" type="text/css" href="../../../../Css/detail.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../Css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../Css/reset.css" />
+
+    <div id="js_banner" class="fx_banner">
+	<ul id="js_banner_img" class="fx_banner_img clear">
+
+        <% var imagesStr = ((Houses.Model.DetailItem)Model).HouseInfo.Images;
+           if (imagesStr!=null && imagesStr.Length>0){
+               string[] images = imagesStr.Split(';');
+               foreach(string image in images){
+                   if(image!=""){
+        %>            
+                        <li>
+                            <div class="fx_banner_inner fx_grid_c1">
+                                <div class="child" data-z="2" style="left:0;top:0;"><img src="<%= '/'+image %>" style="width:900px;height:100%" alt=""></div>
+                            </div>
+                        </li>
+        <%
+                   }
+               }
+           }
+           else
+           {
+               %>
+               <li>
+                    <div class="fx_banner_inner fx_grid_c1">
+                        <div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/安居客600x450c.jpg" alt=""></div>
+                    </div>
+                </li>
+    <%
+           }
+        %>
+
+<%--		<li style="background:#cfd0ef">
+			<div class="fx_banner_inner fx_grid_c1">
+				<div class="child child0" data-z="1"><img src="/Images/0.jpg" alt="misfit shine"></div>
+				<div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/0_1.png" alt=""></div>
+				<div class="child" data-z="3" style="left:450px;top:0;"><img src="/Images/0_2.png" alt=""></div>
+			</div>
+			<a href="#" class="fx_banner_link"><span class="hide">去购买</span></a>
+		</li>
+		<li style="background:#fe5769">
+			<div class="fx_banner_inner fx_grid_c1">
+				<div class="child child0" data-z="1"><img src="/Images/1.jpg" alt="latin"></div>
+				<div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/1_1.png" alt=""></div>
+				<div class="child" data-z="3" style="left:450px;top:0;"><img src="/Images/1_2.png" alt=""></div>
+			</div>
+			<a href="#" class="fx_banner_link"><span class="hide">去购买</span></a>
+		</li>
+		<li style="background:#a3e3ff">
+			<div class="fx_banner_inner fx_grid_c1">
+				<div class="child child0" data-z="1"><img src="/Images/2.jpg" alt="sony"></div>
+				<div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/2_1.png" alt=""></div>
+				<div class="child" data-z="3" style="left:450px;top:0;"><img src="/Images/2_2.png" alt=""></div>
+			</div>
+			<a href="#" class="fx_banner_link"><span class="hide">去购买</span></a>
+		</li>
+		<li style="background:#f3eed4">
+			<div class="fx_banner_inner fx_grid_c1">
+				<div class="child child0" data-z="1"><img src="/Images/3.jpg" alt="洁灵卡"></div>
+				<div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/3_1.png" alt=""></div>
+				<div class="child" data-z="3" style="left:450px;top:0;"><img src="/Images/3_2.png" alt=""></div>
+			</div>
+			<a href="#" class="fx_banner_link"><span class="hide">去购买</span></a>
+		</li>
+		<li style="background:#87c2e3">
+			<div class="fx_banner_inner fx_grid_c1">
+				<div class="child child0" data-z="1"><img src="/Images/4.jpg" alt="海尔天樽"></div>
+				<div class="child" data-z="2" style="left:0;top:0;"><img src="/Images/4_1.png" alt=""></div>
+				<div class="child" data-z="3" style="left:450px;top:0;"><img src="/Images/4_2.png" alt=""></div>
+			</div>
+			<a href="#" class="fx_banner_link"><span class="hide">去购买</span></a>
+		</li>--%>
+
+
+
+	</ul>
+	<div class="fx_banner_common fx_grid_c1">
+		<a ytag="30000" id="js_banner_pre" href="javascript:;" class="fx_banner_pre"></a>
+		<a ytag="30010" id="js_banner_next" href="javascript:;" class="fx_banner_next"></a>
+	</div>
+</div>
+    <!-- js_banner -->
+
+
+
+
+
+<%--    <div class="switch_warpper">
+    <div class="switch_with_map">
+        <div class="inner_switcher" id="inner_switcher">
+            <div class="switch_mask switch_left_mask" id="switch_left_mask" data-track="pc_fydy_switch_qh">
+                <i class="switch_left_btn switch_btn iconfont" id="switch_left_btn"></i>
+                <span id="prev-title">室内图片</span>
+            </div>
+            <div class="switch_mask switch_right_mask" id="switch_right_mask" data-track="pc_fydy_switch_qh">
+                <i class="switch_right_btn switch_btn iconfont" id="switch_right_btn"></i>
+                <span id="next-title">室内图片</span>
+            </div>
+            <div class="switch_wrap" id="switch_wrap" style="left: -1705px;">
+                <div class="switch_list zhankeng_first" id="zhankeng_first">
+                    <div class="img_wrap zhankeng_img1"><img data-src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" alt="" height="450"></div>
+                    <div class="img_wrap zhankeng_img2"><img src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-deft-img.png" alt="暂无图片" height="450"></div>
+                </div>
+                <!--室内图-->
+                <div class="switch_list" id="room_pic_wrap">
+                                                                                                                <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" alt="" height="450">
+                            </div>
+                                                    <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" alt="" height="450">
+                            </div>
+                                                    <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/45f0e03ea7c85690671686de034dfb1c/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/45f0e03ea7c85690671686de034dfb1c/600x450c.jpg" alt="" height="450">
+                            </div>
+                                                    <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/760e6ee1addb1a115e6608dc49ed5c20/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/760e6ee1addb1a115e6608dc49ed5c20/600x450c.jpg" alt="" height="450">
+                            </div>
+                                                    <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/dd0515daaee2ad25d54dda0b39da4ef8/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/dd0515daaee2ad25d54dda0b39da4ef8/600x450c.jpg" alt="" height="450">
+                            </div>
+                                                            </div>
+                <!--户型图-->
+                <div class="switch_list" id="hx_pic_wrap">
+                                                                                            <div class="img_wrap">
+                                <img data-src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-load-img2.png" alt="" height="450">
+                            </div>
+                                                            </div>
+
+                <!--环境图-->
+                <div class="switch_list" id="surround_pic_wrap">
+                                                                <div class="img_wrap">
+                            <img src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-deft-img.png" alt="暂无图片" height="450">
+                        </div>
+                                    </div>
+
+                <div class="switch_list zhankeng_last" id="zhankeng_last">
+                    <div class="img_wrap zhankeng_img1"><img data-src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" alt="" height="450"></div>
+                    <div class="img_wrap zhankeng_img2"><img data-src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" alt="" height="450"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="switch_tab_wrap" id="switch_tab_wrap">
+        <a class="switch_tag switch_tag_now" href="javascript:;" data-track="pc_fydy_switch_snt" id="room_tab">
+            <i class="switch-icon iconfont switch-room-icon"></i>
+            <em class="title">室内图(5)</em>
+        </a>
+        <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_huxing_click" id="hx_tab">
+            <i class="switch-icon iconfont switch-hx-icon"></i>
+            <em class="title">户型图<span class="num">(1)</span></em>
+        </a>
+        <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_hjt_click" id="surround_tab">
+            <i class="switch-icon iconfont switch-surd-icon"></i>
+            <em class="title">环境图<span class="num">(0)</span></em>
+        </a>
+                    <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_zbdt_click" id="map_tab" style="height: 109px;">
+                <i class="switch-icon iconfont"></i>
+                <em class="title">周边地图</em>
+            </a>
+            </div>
+</div>--%>
+
+
 
 <div class="mod-title bottomed">
     <h3 id="houseInfo" class="title nav-scroll">房屋信息</h3>
@@ -19,11 +187,11 @@
                         </li>
     <li class="house-info-item l-width">
         <span class="type">户型：</span>
-        <span class="info"><%=((Houses.Model.DetailItem)Model).HouseInfo.HouseType.Name  %></span>
+        <span class="info"><%=((Houses.Model.DetailItem)Model).HouseInfo.HouseType.Name%></span>
     </li>
     <li class="house-info-item">
         <span class="type">面积：</span>
-        <span class="info"><%=((Houses.Model.DetailItem)Model).HouseInfo.Floorage %></span>
+        <span class="info"><%=((Houses.Model.DetailItem)Model).HouseInfo.Floorage%></span>
     </li>
     <li class="house-info-item">
         <span class="type">朝向：</span>
@@ -59,14 +227,14 @@
         <%int index = 0;
           if (((Houses.Model.DetailItem)Model).Words != null)
           {
-            foreach (var word in ((Houses.Model.DetailItem)Model).Words)
-            { %>
+              foreach (var word in ((Houses.Model.DetailItem)Model).Words)
+              { %>
         <li>
             <a href="javascript:void(0)" class="comm-qa-item clearfix" data-soj="pc_fydy_xqwd_wt" onselectstart="return false" target="_blank">
                 <dl class="qa-item-q clearfix">
                     <dt><span>留言</span></dt>
-                    <dd class="qa-item-txt"><%=word.Content %></dd>
-                    <dd class="qa-time"><%=word.PublishTime %></dd>
+                    <dd class="qa-item-txt"><%=word.Content%></dd>
+                    <dd class="qa-time"><%=word.PublishTime%></dd>
                 </dl>
                 <dl class="qa-item-a clearfix">
                     <!-- <dt><span>回答</span></dt> -->
@@ -117,7 +285,22 @@
 </form>
 
 <script src="../../../../Script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../../../Script/tab.js"></script>
 <script type="text/javascript">
+    $(function () {
+        //var $window = $(window), window_width = $window.width();
+        $('#js_banner, #js_banner_img li').width(900);
+        new $.Tab({
+            target: $('#js_banner_img li'),
+            effect: 'slide3d',
+            animateTime: 1000,
+            stay: 3500,
+            autoPlay: true,
+            merge: true,
+            prevBtn: $('#js_banner_pre'),
+            nextBtn: $('#js_banner_next')
+        });
+    });
 
 
     function CheckUser() {

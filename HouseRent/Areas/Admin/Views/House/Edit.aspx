@@ -133,7 +133,6 @@
 
                             if (appendStr != "") {
                                 $("#imageList").html($("#imageList").html() + appendStr);
-                                
                                 $("#Images").attr("value", $("#Images").attr("value") + resultData);
                             }
                         }
