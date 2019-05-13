@@ -1,0 +1,109 @@
+﻿.switch_warpper {
+    margin-top: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-left: none;
+}
+
+
+.switch_warpper .switch_with_map {
+    height: 450px;
+    width: 790px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 110px;
+}
+
+.switch_warpper .switch_with_map .inner_switcher {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
+
+.switch_warpper .switch_with_map .inner_switcher .switch_mask {
+    position: absolute;
+    width: 95px;
+    height: 450px;
+    background: #FFFFFF;
+    z-index: 10;
+    -webkit-transition: display .2s;
+    transition: display .2s;
+}
+
+.switch_warpper .switch_btn.switch_left_btn {
+    left: 27px;
+    color: #62ab00;
+    -webkit-transition: left .1s;
+    transition: left .1s;
+}
+
+
+.switch_warpper .switch_with_map .inner_switcher .switch_mask.switch_right_mask {
+    right: 1px;
+}
+
+.switch_warpper .switch_with_map .inner_switcher .switch_mask {
+    position: absolute;
+    width: 95px;
+    height: 450px;
+    background: #FFFFFF;
+    z-index: 10;
+    -webkit-transition: display .2s;
+    transition: display .2s;
+}
+
+
+.switch_warpper .switch_btn {
+    width: 25px;
+    height: 50px;
+    position: absolute;
+    top: 161px;
+    z-index: 2;
+    font-size: 50px;
+    background-image: none;
+    cursor: pointer;
+}
+
+.switch_warpper .switch_btn.switch_right_btn {
+    right: 42px;
+    color: #62ab00;
+    -webkit-transition: right .1s;
+    transition: right .1s;
+}
+
+.switch_warpper .switch_btn {
+    width: 25px;
+    height: 50px;
+    position: absolute;
+    top: 161px;
+    z-index: 2;
+    font-size: 50px;
+    background-image: none;
+    cursor: pointer;
+}
+
+
+
+.switch_warpper .switch_with_map .inner_switcher .switch_mask span {
+    position: absolute;
+    left: 0;
+    top: 236px;
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    margin-left: 30px;
+}
+
+.switch_warpper .switch_with_map {
+    height: 450px;
+    width: 790px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 110px;
+}
