@@ -84,9 +84,9 @@ namespace Houses.DAL
                     Comment comment = new Comment();
                     comment.Id = new Guid(dr["Id"].ToString());
                     comment.UserId = int.Parse(dr["UserId"].ToString());
-                    comment.HouseId = int.Parse(dr["Theme"].ToString());
+                    comment.HouseId = int.Parse(dr["HouseId"].ToString());
                     comment.Content = dr["Content"].ToString();
-                    comment.CommentTime = Convert.ToDateTime(dr["PublishTime"].ToString());
+                    comment.CommentTime = Convert.ToDateTime(dr["CommentTime"].ToString());
                     comment.Score = int.Parse(dr["Score"].ToString());
                     result.Add(comment);
                 }
