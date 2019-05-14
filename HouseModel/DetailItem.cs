@@ -12,5 +12,7 @@ namespace Houses.Model
         public House HouseInfo;
 
         public List<Words> Words;
+
+        public List<Comment> Comments;
     }
 }
