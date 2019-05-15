@@ -54,6 +54,30 @@ namespace Houses.DAL
             }
         }
 
+        public int UpdateReply(string wordId, string reply)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update Words set Answer = @Answer where Id = @Id");
+            strSql.Append(" SELECT @@ROWCOUNT");
+            //strSql.Append(";select @@IDENTITY");
+            SqlParameter[] parameters = {
+                new SqlParameter("@Id",SqlDbType.UniqueIdentifier),
+                new SqlParameter("@AnsWer",SqlDbType.NVarChar,200),
+            };
+            parameters[0].Value = wordId;
+            parameters[1].Value = reply;
+
+            object obj = SqlHelper.ExecuteScalar(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+
         /// <summary>
         /// 获取用户的求租留言
         /// </summary>

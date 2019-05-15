@@ -52,7 +52,7 @@ namespace HouseRent.Areas.Admin.Controllers
 
         // 新增 or 修改
         [HttpPost]
-        public ActionResult Edit( House house)
+        public ActionResult Edit(House house)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace HouseRent.Areas.Admin.Controllers
                     ret = manager.Add(house);
                 }
                 string msg = ret ? "编辑成功！" : "编辑失败！";
-                return Content("<script>alert('" + msg + "');location.href='/Admin';</script>");
+                return Content("<script>alert('" + msg + "');location.href='/Admin?userId=" + (Session["admin"] as User).LoginId + "';</script>");
             }
 
             return View(house);

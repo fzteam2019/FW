@@ -26,6 +26,11 @@ namespace Houses.BLL
             return dal.Add(words);
         }
 
+        public int UpdateReply(string wordId, string reply)
+        {
+            return dal.UpdateReply(wordId, reply);
+        }
+
         /// <summary>
         /// 获取房东所发布的房源的所有评论
         /// </summary>
