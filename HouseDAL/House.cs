@@ -253,6 +253,29 @@ namespace Houses.DAL
                 return false;
             }
         }
+
+        public List<Object> GetPublishData() {
+            DateTime dt = DateTime.Now;
+            string d1 = new DateTime(dt.Year, dt.Month, 1).ToString("yyyy-MM-dd");
+            string d2 = dt.ToString("yyyy-MM-dd");
+            string sql = @"select datepart(dd,PublishTime) [date], COUNT(HouseId) total
+                            FROM [House].[dbo].[House]  where PublishTime>='" + d1+ "' and PublishTime<='" +d2+
+                        "' group by datepart(dd,PublishTime)";
+            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString, CommandType.Text, sql);
+            List<Object> list = new List<Object>();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    list.Add(new
+                    {
+                        date = new DateTime(dt.Year, dt.Month,Convert.ToInt16(ds.Tables[0].Rows[i]["date"]) ).ToString("yyyy-MM-dd"),
+                        total = ds.Tables[0].Rows[i]["total"]
+                    });
+                }
+            }
+            return list;
+        }
         //        /// <summary>
         //        /// 删除一条数据
         //        /// </summary>

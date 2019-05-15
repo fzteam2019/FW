@@ -275,6 +275,33 @@ namespace Houses.DAL
                 return false;
             }
         }
+
+        public List<Object> GetBarData() {
+            string sql = @"select nnd as 'range' , count(*) as 'total' from(
+                        select
+                        case
+	                        when age>= 15 and age<= 20   then '15-20'
+                            when age>= 21 and age<= 25   then '21-25'
+                            when age>= 26 and age<= 30   then '26-30'
+                            when age>= 31 and age<= 35   then '31-35'
+                            when age>= 36 and age<= 40   then '36-40'
+                            when age>= 41 and age<= 45   then '41-45'
+                            end
+                            as nnd,UserName FROM[User] ) a group by nnd";
+            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString, CommandType.Text, sql);
+            List<Object> list = new List<Object>();
+            if (ds.Tables[0].Rows.Count > 0)
+            {               
+                for (var i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    list.Add(new {
+                        name = ds.Tables[0].Rows[i]["range"],
+                        total = ds.Tables[0].Rows[i]["total"]
+                    });
+                }
+            }
+            return list;
+        }
         //        /// <summary>
         //        /// 获得前几行数据
         //        /// </summary>

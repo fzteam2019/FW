@@ -49,6 +49,10 @@ namespace Houses.BLL
         {
             return dal.Delete(houseId);
         }
+
+        public List<Object> GetPublishData() {
+            return dal.GetPublishData();
+        }
         #endregion
     }
 }

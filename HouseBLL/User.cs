@@ -64,6 +64,10 @@ namespace Houses.BLL
         public bool Delete(int id) {
             return dal.Delete(id);
         }
+
+        public List<Object> GetBarData() {
+            return dal.GetBarData();
+        }
         #endregion  Method
     }
 }
