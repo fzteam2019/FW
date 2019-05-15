@@ -1,7 +1,8 @@
+
 ﻿using Houses.BLL;
 using Houses.Model;
 using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace HouseRent.Controllers
     {
         //
         // GET: /Home/
+
         private UserManager m_user=null;
         private HouseManager m_house = null;
         public HomeController() {
@@ -25,7 +27,6 @@ namespace HouseRent.Controllers
 
             return View();
         }
-
         public JsonResult GetChartData() {
             List<Object> barData = m_user.GetBarData();
             List<Object> publishData = m_house.GetPublishData();
@@ -42,5 +43,6 @@ namespace HouseRent.Controllers
             string sResult = Newtonsoft.Json.JsonConvert.SerializeObject(pageList, timeFormat);
             return Json(new { data = sResult }, JsonRequestBehavior.AllowGet);
         }
+
     }
 }
