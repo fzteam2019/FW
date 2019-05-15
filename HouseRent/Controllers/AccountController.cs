@@ -40,7 +40,8 @@ namespace HouseRent.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("index", "House", new { area = "Front" });
+                        // return RedirectToAction("index", "House", new { area = "Front" });
+                        return RedirectToAction("Index", "Home");
                     }
                 }
                 else
