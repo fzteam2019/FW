@@ -26,10 +26,12 @@ namespace HouseRent.Areas.Front.Controllers
         {
             House houseInfo = new HouseManager().GetHouse(houseId);
             List<Words> words = new WordsManager().GetAllWordsByHouseId(houseId);
+            List<Comment> comments = new CommentManager().GetAllCommentByHouseId(houseId);
 
             var result =  new DetailItem{
                     HouseInfo = houseInfo,
-                    Words = words
+                    Words = words,
+                    Comments = comments
                 };
             
             return View(result);
@@ -57,5 +59,27 @@ namespace HouseRent.Areas.Front.Controllers
             return Content(result.ToString());
         }
 
+        /// <summary>
+        /// 新增评价
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="score"></param>
+        /// <param name="userid"></param>
+        /// <param name="houseid"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult AddComment(string content, string score, int userid, int houseid)
+        {
+            Comment comment = new Comment(){
+                Id = Guid.NewGuid(),
+                Content = content,
+                Score = int.Parse(score),
+                UserId = userid,
+                HouseId = houseid,
+                CommentTime = DateTime.Now
+            };
+            int result = new CommentManager().Add(comment);
+            return Content(result.ToString());
+        }
     }
 }

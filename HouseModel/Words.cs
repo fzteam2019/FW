@@ -19,6 +19,8 @@ namespace Houses.Model
 
         private string _content;
 
+        private string _answer;
+
         private DateTime _publishTime;
 
         private int _userId;
@@ -48,6 +50,12 @@ namespace Houses.Model
         {
             get { return _content; }
             set { _content = value; }
+        }
+
+        public string Answer
+        {
+            get { return _answer; }
+            set { _answer = value; }
         }
 
         public DateTime PublishTime

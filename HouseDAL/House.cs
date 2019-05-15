@@ -57,6 +57,18 @@ namespace Houses.DAL
             return GetItemsBySql(strSql.ToString());
         }
 
+        public List<House> GetListByUserId(int userId)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select  h.*,s.Name StreetName,d.Id DistrictId, d.Name DistrictName,t.Name TypeName from House h ");
+            strSql.Append(" inner join Street s on s.Id=h.StreetId ");
+            strSql.Append(" inner join District d on d.Id=s.DistrictId ");
+            strSql.Append(" inner join HouseType t on t.Id=h.TypeId where h.PublishUser = " + userId);
+
+            return GetItemsBySql(strSql.ToString());
+        }
+
+
         private List<House> GetItemsBySql(string safeSql)
         {
             var list = new List<House>();
@@ -389,6 +401,8 @@ namespace Houses.DAL
         //        }*/
 
         #endregion  Method
+
+
     }
 }
 
