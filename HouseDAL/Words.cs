@@ -91,5 +91,40 @@ namespace Houses.DAL
         }
 
 
+        /// <summary>
+        /// 获取房东发布房屋的所有留言
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public List<Words> GetAllUserWords(int userId)
+        {
+            List<Words> result = null;
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from Words");
+            strSql.Append(" where HouseId in (select HouseId from House where PublishUser = @PublishUser)");
+            SqlParameter[] parameters = {
+                new SqlParameter("@PublishUser",SqlDbType.Int)
+            };
+            parameters[0].Value = userId;
+
+            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                result = new List<Words>();
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    Words words = new Words();
+                    words.Id = new Guid(dr["Id"].ToString());
+                    words.Name = dr["Name"].ToString();
+                    words.Theme = dr["Theme"].ToString();
+                    words.Content = dr["Content"].ToString();
+                    words.PublishTime = Convert.ToDateTime(dr["PublishTime"].ToString());
+                    words.UserId = int.Parse(dr["UserId"].ToString());
+                    words.HouseId = int.Parse(dr["HouseId"].ToString());
+                    result.Add(words);
+                }
+            }
+            return result;
+        }
     }
 }

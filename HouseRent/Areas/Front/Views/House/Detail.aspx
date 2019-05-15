@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../Css/detail.css" />
     <link rel="stylesheet" type="text/css" href="../../../../Css/index.css" />
     <link rel="stylesheet" type="text/css" href="../../../../Css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../Css/Comment.css" />
 
     <div id="js_banner" class="fx_banner">
 	<ul id="js_banner_img" class="fx_banner_img clear">
@@ -95,82 +96,7 @@
 
 
 
-<%--    <div class="switch_warpper">
-    <div class="switch_with_map">
-        <div class="inner_switcher" id="inner_switcher">
-            <div class="switch_mask switch_left_mask" id="switch_left_mask" data-track="pc_fydy_switch_qh">
-                <i class="switch_left_btn switch_btn iconfont" id="switch_left_btn"></i>
-                <span id="prev-title">室内图片</span>
-            </div>
-            <div class="switch_mask switch_right_mask" id="switch_right_mask" data-track="pc_fydy_switch_qh">
-                <i class="switch_right_btn switch_btn iconfont" id="switch_right_btn"></i>
-                <span id="next-title">室内图片</span>
-            </div>
-            <div class="switch_wrap" id="switch_wrap" style="left: -1705px;">
-                <div class="switch_list zhankeng_first" id="zhankeng_first">
-                    <div class="img_wrap zhankeng_img1"><img data-src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" alt="" height="450"></div>
-                    <div class="img_wrap zhankeng_img2"><img src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-deft-img.png" alt="暂无图片" height="450"></div>
-                </div>
-                <!--室内图-->
-                <div class="switch_list" id="room_pic_wrap">
-                                                                                                                <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" alt="" height="450">
-                            </div>
-                                                    <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" alt="" height="450">
-                            </div>
-                                                    <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/45f0e03ea7c85690671686de034dfb1c/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/45f0e03ea7c85690671686de034dfb1c/600x450c.jpg" alt="" height="450">
-                            </div>
-                                                    <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/760e6ee1addb1a115e6608dc49ed5c20/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/760e6ee1addb1a115e6608dc49ed5c20/600x450c.jpg" alt="" height="450">
-                            </div>
-                                                    <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/dd0515daaee2ad25d54dda0b39da4ef8/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/dd0515daaee2ad25d54dda0b39da4ef8/600x450c.jpg" alt="" height="450">
-                            </div>
-                                                            </div>
-                <!--户型图-->
-                <div class="switch_list" id="hx_pic_wrap">
-                                                                                            <div class="img_wrap">
-                                <img data-src="https://pic1.ajkimg.com/display/anjuke/23d87a055e9db03e290292ed4c6227e4/600x450c.jpg" src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-load-img2.png" alt="" height="450">
-                            </div>
-                                                            </div>
 
-                <!--环境图-->
-                <div class="switch_list" id="surround_pic_wrap">
-                                                                <div class="img_wrap">
-                            <img src="https://pages.anjukestatic.com/usersite/site/img/global/defaultImg/big-deft-img.png" alt="暂无图片" height="450">
-                        </div>
-                                    </div>
-
-                <div class="switch_list zhankeng_last" id="zhankeng_last">
-                    <div class="img_wrap zhankeng_img1"><img data-src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/e68f015c81beeeea6c066b3995600885/600x450c.jpg" alt="" height="450"></div>
-                    <div class="img_wrap zhankeng_img2"><img data-src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" src="https://pic1.ajkimg.com/display/anjuke/227e2d295200cfb6f9303704b9b86020/600x450c.jpg" alt="" height="450"></div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <div class="switch_tab_wrap" id="switch_tab_wrap">
-        <a class="switch_tag switch_tag_now" href="javascript:;" data-track="pc_fydy_switch_snt" id="room_tab">
-            <i class="switch-icon iconfont switch-room-icon"></i>
-            <em class="title">室内图(5)</em>
-        </a>
-        <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_huxing_click" id="hx_tab">
-            <i class="switch-icon iconfont switch-hx-icon"></i>
-            <em class="title">户型图<span class="num">(1)</span></em>
-        </a>
-        <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_hjt_click" id="surround_tab">
-            <i class="switch-icon iconfont switch-surd-icon"></i>
-            <em class="title">环境图<span class="num">(0)</span></em>
-        </a>
-                    <a class="switch_tag" href="javascript:;" data-track="pc_zfdy_xc_zbdt_click" id="map_tab" style="height: 109px;">
-                <i class="switch-icon iconfont"></i>
-                <em class="title">周边地图</em>
-            </a>
-            </div>
-</div>--%>
 
 
 
@@ -264,6 +190,42 @@
 </div>
 
 
+<div class="mod-title bottomed">
+    <h3 class="title" data-trace="">评价列表</h3>
+</div>
+<div>
+    <ul>
+
+        <% index = 0;
+          if (((Houses.Model.DetailItem)Model).Comments != null)
+          {
+              foreach (var comment in ((Houses.Model.DetailItem)Model).Comments)
+              { %>
+        <li>
+            <a href="javascript:void(0)" class="comm-qa-item clearfix" data-soj="pc_fydy_xqwd_wt" onselectstart="return false" target="_blank">
+                <dl class="qa-item-q clearfix">
+                    <dt><span>留言</span></dt>
+                    <dd class="qa-item-txt"><%=comment.Content%></dd>
+                    <dd class="qa-item-txt"><%=comment.Score%></dd>
+                    <dd class="qa-time"><%=comment.CommentTime%></dd>
+                </dl>
+                <dl class="qa-item-a clearfix">
+                    <!-- <dt><span>回答</span></dt> -->
+                    <dd><span class="qa-brokername" data-url="https://maitianfangchan4.anjuke.com/gongsi-jjr-6043638/">
+                            卢忠慧：</span>不行，还没有出证</dd>
+                    <%--<dd class="qa-item-linkto">我补充&gt;</dd>--%>
+                </dl>
+            </a>
+        </li>
+        <%}
+          }%>
+
+    </ul>
+    <div class="comm-btn-group clearfix">
+        <a href="javascript:void(0);" class="comm-qa-askbtn" onclick="OpenCommentDialog()">我要评价</a>
+    </div>
+</div>
+
 <!-- 遮罩层 -->
 <div class="mask">
 
@@ -280,8 +242,39 @@
         </form>
     </div>
 </div>
-<form>
 
+<!-- 评价弹窗框 -->
+<form>
+    <div class="comment_dialog">
+        <div class="comment">
+            <%--<div class="comment-level"></div>--%>
+            <div class="comment-text-area">
+                <%--<div class="text-area-star">
+                    <label><input type="radio" name="star" value="1"/><span>一星</span></label>
+                    <label><input type="radio" name="star" value="2"/><span>二星</span></label>
+                    <label><input type="radio" name="star" value="3"/><span>三星</span></label>
+                    <label><input type="radio" name="star" value="4"/><span>四星</span></label>
+                    <label class="red"><input type="radio" checked name="star" value="5"/><span>五星</span></label>
+                </div>--%>
+                <div id="star">
+		            <%--<span>评论打分</span>--%>
+		            <ul>
+			            <li><a href="javascript:;">-2</a></li>
+			            <li><a href="javascript:;">-1</a></li>
+			            <li><a href="javascript:;">0</a></li>
+			            <li><a href="javascript:;">1</a></li>
+			            <li><a href="javascript:;">2</a></li>
+		            </ul>
+		            <span></span>
+		            <p></p>
+	            </div>
+                <div><textarea class="text-area text-area-input" id="content_comment" name="content">请输入评论内容......</textarea></div>
+                <%--<div class="text-area-input-length">您还可输入<span>20</span>个字</div>--%>
+                <div class="text-area-bottom"><a href="javascript:void(0);" onclick="CloseCommentDialog()">取消</a></div>
+                <div class="text-area-bottom"><a href="javascript:void(0);" onclick="SaveComment()">提交评价</a></div>
+            </div>  
+        </div>
+    </div>
 </form>
 
 <script src="../../../../Script/jquery-1.7.2.min.js"></script>
@@ -300,7 +293,66 @@
             prevBtn: $('#js_banner_pre'),
             nextBtn: $('#js_banner_next')
         });
+
+
+        
     });
+
+
+    window.onload = function () {
+
+        var oStar = document.getElementById("star");
+        var aLi = oStar.getElementsByTagName("li");
+        var oUl = oStar.getElementsByTagName("ul")[0];
+        var oSpan = oStar.getElementsByTagName("span")[0];
+        var oP = oStar.getElementsByTagName("p")[0];
+        var i = iStar = 0;
+        var iScore = -8;
+        var aMsg = [
+                    "很不满意|差得太离谱，与卖家描述的严重不符，非常不满",
+                    "不满意|部分有破损，与卖家描述的不符，不满意",
+                    "一般|质量一般，没有卖家描述的那么好",
+                    "满意|质量不错，与卖家描述的基本一致，还是挺满意的",
+                    "非常满意|质量非常好，与卖家描述的完全一致，非常满意"
+        ]
+
+        for (i = 1; i <= aLi.length; i++) {
+            aLi[i - 1].index = i;
+
+            //鼠标移过显示分数
+            aLi[i - 1].onmouseover = function () {
+                fnPoint(this.index);
+                //浮动层显示
+                oP.style.display = "block";
+                //计算浮动层位置
+                oP.style.left = oUl.offsetLeft + this.index * this.offsetWidth - 104 + "px";
+                //匹配浮动层文字内容
+                oP.innerHTML = "<em><b>" + (this.innerText) + "</b> 分 " + aMsg[this.index - 1].match(/(.+)\|/)[1] + "</em>" + aMsg[this.index - 1].match(/\|(.+)/)[1]
+            };
+
+            //鼠标离开后恢复上次评分
+            aLi[i - 1].onmouseout = function () {
+                fnPoint();
+                //关闭浮动层
+                oP.style.display = "none"
+            };
+
+            //点击后进行评分处理
+            aLi[i - 1].onclick = function () {
+                iStar = this.index;
+                oP.style.display = "none";
+                oSpan.innerHTML = "<strong>" + (this.innerText) + " 分</strong> (" + aMsg[this.index - 1].match(/\|(.+)/)[1] + ")"
+            }
+        }
+
+        //评分处理
+        function fnPoint(iArg) {
+            //分数赋值
+            iScore = iArg || iStar;
+            for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+        }
+
+    };
 
 
     function CheckUser() {
@@ -346,6 +398,46 @@
 
     }
 
+
+    function OpenCommentDialog() {
+        $(".mask").show();
+        $(".comment_dialog").show();
+    }
+
+    function CloseCommentDialog() {
+        $(".mask").hide();
+        $(".comment_dialog").hide();
+    }
+
+    function SaveComment() {
+        var content = $("#content_comment").val();
+        var score = '';
+        if ($("div[id='star']>p>em>b") != null && $("div[id='star']>span>strong") != undefined) {
+            score = $("div[id='star']>span>strong").text();
+            score = score.replace("分", "").replace(" ", "");
+        }
+        if (score == '') {
+            alert("分数不能为空");
+            return;
+        }
+        if (content == '' || content == '请输入评论内容......') {
+            alert("评论不能为空");
+            return;
+        }
+        var houseId = GetUrlParam("houseId");
+        $.ajax({
+            url: "AddComment",
+            type: 'POST',
+            async: false,
+            dataType: 'text',
+            data: { content: content, score:score, userid: 1, houseid: houseId }, //
+            success: function (resultData) {
+
+                CloseWordsDialog();
+                window.location = document.location.href;
+            }
+        });
+    }
 
     function GetUrlParam(paraName) {
         var url = document.location.toString();
@@ -508,8 +600,6 @@
         height: 100%;
     }
 
-
-
     .comm-qa-list .qa-item-q dt span {
         background-color: #f60;
     }
@@ -591,7 +681,7 @@
     }
 
     /*留言框*/
-    .words_dialog{
+    .words_dialog,.comment_dialog {
         border:solid 10px #898989;
         background:#fff;
         padding:10px;

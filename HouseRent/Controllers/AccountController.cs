@@ -35,7 +35,7 @@ namespace HouseRent.Controllers
                         return Redirect("Account/UserList");
                     }
                     else if (user.RuleType == 2) {
-                        return RedirectToAction("index", "House", new { area = "Admin" });
+                        return RedirectToAction("index", "House", new { area = "Admin",userId = user.LoginId });
 
                     }
                     else

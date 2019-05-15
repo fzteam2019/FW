@@ -15,10 +15,10 @@ namespace HouseRent.Areas.Admin.Controllers
         //
         // GET: /Admin/House/
         const int pageSize = 5;
-        public ActionResult Index(int pageIndex=1)
+        public ActionResult Index(int userId,int pageIndex=1)
         {
-            var houseData = new HouseManager().GetAll();
-            var pageList = new PagedList<House>(houseData, pageIndex, pageSize);
+            var houseData = new HouseManager().GetAllByUserId(userId);
+            var pageList = new PagedList<House>(houseData == null ? new List<House>() : houseData, pageIndex, pageSize);
             return View(pageList);
         }
 
@@ -124,6 +124,14 @@ namespace HouseRent.Areas.Admin.Controllers
         //    }
         //    return Content("success");
         //}
+
+
+        public ActionResult WordsList(int userId)
+        {
+
+            
+            return View();
+        }
 
     }
 }
