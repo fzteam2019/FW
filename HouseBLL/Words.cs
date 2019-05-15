@@ -25,5 +25,15 @@ namespace Houses.BLL
         {
             return dal.Add(words);
         }
+
+        /// <summary>
+        /// 获取房东所发布的房源的所有评论
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public List<Words> GetAllUserWords(int userId)
+        {
+            return dal.GetAllUserWords(userId);
+        }
     }
 }

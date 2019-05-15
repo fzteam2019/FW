@@ -21,6 +21,11 @@ namespace Houses.BLL
             return dal.GetList();
         }
 
+        public List<House> GetAllByUserId(int userId)
+        {
+            return dal.GetListByUserId(userId);
+        }
+
         public House GetHouse(int houseId)
         {
             return dal.GetModel(houseId);
