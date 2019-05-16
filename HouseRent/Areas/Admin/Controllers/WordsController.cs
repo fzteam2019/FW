@@ -21,5 +21,14 @@ namespace HouseRent.Areas.Admin.Controllers
             return View(pageList);
         }
 
+
+        public ActionResult Edit(string wordId,string reply)
+        {
+            var manager = new WordsManager();
+            int ret = manager.UpdateReply(wordId, reply);
+
+            string msg = ret == 1 ? "编辑成功！" : "编辑失败！";
+            return Content("<script>alert('" + msg + "');location.href='/Admin?userId=" + (Session["admin"] as User).LoginId + "';</script>");
+        }
     }
 }

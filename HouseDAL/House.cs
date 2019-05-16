@@ -175,7 +175,7 @@ namespace Houses.DAL
             parameters[6].Value = model.Description??"";
             parameters[7].Value = model.PublishUserId;
             parameters[8].Value = model.PublishTime;
-            parameters[9].Value = model.Images;
+            parameters[9].Value = model.Images == null ? "" : model.Images;
 
             object obj = SqlHelper.ExecuteScalar(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
             if (obj == null)
