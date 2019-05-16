@@ -52,7 +52,7 @@ namespace Houses.DAL
             strSql.Append("select  h.*,s.Name StreetName,d.Id DistrictId, d.Name DistrictName,t.Name TypeName from House h ");
             strSql.Append(" inner join Street s on s.Id=h.StreetId ");
             strSql.Append(" inner join District d on d.Id=s.DistrictId ");
-            strSql.Append(" inner join HouseType t on t.Id=h.TypeId ");
+            strSql.Append(" inner join HouseType t on t.Id=h.TypeId order by h.PublishTime Desc");
 
             return GetItemsBySql(strSql.ToString());
         }
