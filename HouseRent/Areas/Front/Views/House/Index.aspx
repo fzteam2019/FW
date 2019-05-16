@@ -30,7 +30,7 @@
     <a data-company=""
         class="img"
         data-sign="true"
-        href="Front/House/Detail"
+        href="javascript:void(0)"
         title="<%= item.Title %>"
         target="_blank"
         hidefocus="true">
@@ -51,7 +51,7 @@
         <p class="details-item tag">
             1室1厅<span>|</span><%=item.Floorage %>平米<span>|</span>中层(共31层)                                                                    <i class="iconfont jjr-icon">&#xE147;</i>杨超                                                            </p>
         <address class="details-item">
-            <a target="_blank" href="https://fz.anjuke.com/community/view/1067756">浮村新城二区</a>&nbsp;&nbsp;
+            <a target="_blank" href="javascript:void(0)">浮村新城二区</a>&nbsp;&nbsp;
             晋安-新店 南平东路58号                            </address>
         <p class="details-item bot-tag">
                 <span class="cls-1">整租</span>

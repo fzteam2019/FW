@@ -28,7 +28,16 @@ namespace HouseRent.Areas.Admin.Controllers
             int ret = manager.UpdateReply(wordId, reply);
 
             string msg = ret == 1 ? "编辑成功！" : "编辑失败！";
-            return Content("<script>alert('" + msg + "');location.href='/Admin?userId=" + (Session["admin"] as User).LoginId + "';</script>");
+            return Content(msg);
+            //return Content("<script>alert('" + msg + "');location.href='/Admin?userId=" + (Session["admin"] as User).LoginId + "';</script>");
+        }
+
+        public ActionResult GetWord(string wordId)
+        {
+            var manager = new WordsManager();
+            Words word =  manager.GetWord(wordId);
+            string result = word == null ? "" : word.Answer;
+            return Content(result);
         }
     }
 }

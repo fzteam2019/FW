@@ -50,7 +50,7 @@
     <div>
         <form id="myForm">
             <span>回复内容：</span>
-            <textarea id="replyContent"></textarea>
+            <input type="text" id="replyContent"></input>
             <%--<input type="button" value="提交" onclick="<%=Url.Action("Edit","Words",new {area="Admin", wordId="" })%> "/>--%>
             <input type="button" value="提交" onclick="ReplySubmit()"/>
 
@@ -73,7 +73,22 @@
         }
 
         function ReplySubmit(){
-            this.location.href = <%=Url.Action("Edit","Words",new {area="Admin"})%> + this.currWordId ; 
+            var reply = document.getElementById('replyContent').value;
+                $.ajax({
+                    url: '<%=Url.Action("Edit","Words",new {area="Admin"}) %>',
+                type: 'POST',
+                async: false,
+                dataType: 'text',
+                data: {wordId:this.currWordId,reply:reply}, //
+                success: function (resultData) {
+                    CloseReplyDialog();
+                    window.location = document.location.href;
+                    
+                    }
+                });
+
+
+            //this.location.href = <%=Url.Action("Edit","Words",new {area="Admin"})%> + this.currWordId ; 
         }
 
 
@@ -88,6 +103,17 @@
             currWordId = wordId;
             $(".mask").show();
             $(".reply_dialog").show();
+
+            $.ajax({
+                url: '<%=Url.Action("GetWord","Words",new {area="Admin"}) %>',
+                    type: 'POST',
+                    async: false,
+                    dataType: 'text',
+                    data: {wordId:this.currWordId}, //
+                    success: function (resultData) {
+                        document.getElementById('replyContent').value = resultData;
+                    }
+                });
         }
 
     </script>

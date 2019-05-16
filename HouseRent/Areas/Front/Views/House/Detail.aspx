@@ -164,8 +164,10 @@
                 </dl>
                 <dl class="qa-item-a clearfix">
                     <!-- <dt><span>回答</span></dt> -->
+                    <% if(!string.IsNullOrEmpty(word.Answer)){ %>
                     <dd><span class="qa-brokername" data-url="https://maitianfangchan4.anjuke.com/gongsi-jjr-6043638/">
-                            卢忠慧：</span>不行，还没有出证</dd>
+                            房东回复：</span><%=word.Answer %></dd>
+                    <%} %>
                     <%--<dd class="qa-item-linkto">我补充&gt;</dd>--%>
                 </dl>
             </a>
@@ -211,6 +213,7 @@
                 </dl>
                 <dl class="qa-item-a clearfix">
                     <!-- <dt><span>回答</span></dt> -->
+                    
                     <dd><span class="qa-brokername" data-url="https://maitianfangchan4.anjuke.com/gongsi-jjr-6043638/">
                             卢忠慧：</span>不行，还没有出证</dd>
                     <%--<dd class="qa-item-linkto">我补充&gt;</dd>--%>

@@ -64,7 +64,7 @@ namespace Houses.DAL
                 new SqlParameter("@Id",SqlDbType.UniqueIdentifier),
                 new SqlParameter("@AnsWer",SqlDbType.NVarChar,200),
             };
-            parameters[0].Value = wordId;
+            parameters[0].Value = new Guid(wordId);
             parameters[1].Value = reply;
 
             object obj = SqlHelper.ExecuteScalar(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
@@ -108,12 +108,39 @@ namespace Houses.DAL
                     words.PublishTime = Convert.ToDateTime(dr["PublishTime"].ToString());
                     words.UserId = int.Parse(dr["UserId"].ToString());
                     words.HouseId = int.Parse(dr["HouseId"].ToString());
+                    words.Answer = dr["Answer"].ToString();
                     result.Add(words);
                 }
             }
             return result;
         }
 
+
+        public Words GetWord(string id)
+        {
+            Words word = null;
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from Words where Id = @Id");
+            SqlParameter[] parameters = {
+                new SqlParameter("@Id",SqlDbType.UniqueIdentifier)
+            };
+            parameters[0].Value = new Guid(id);
+            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnectionString, CommandType.Text, strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                    word = new Words();
+                    word.Id = new Guid(dr["Id"].ToString());
+                    word.Name = dr["Name"].ToString();
+                    word.Theme = dr["Theme"].ToString();
+                    word.Content = dr["Content"].ToString();
+                    word.PublishTime = Convert.ToDateTime(dr["PublishTime"].ToString());
+                    word.UserId = int.Parse(dr["UserId"].ToString());
+                    word.HouseId = int.Parse(dr["HouseId"].ToString());
+                    word.Answer = dr["Answer"].ToString();
+            }
+            return word;
+        }
 
         /// <summary>
         /// 获取房东发布房屋的所有留言
@@ -145,6 +172,7 @@ namespace Houses.DAL
                     words.PublishTime = Convert.ToDateTime(dr["PublishTime"].ToString());
                     words.UserId = int.Parse(dr["UserId"].ToString());
                     words.HouseId = int.Parse(dr["HouseId"].ToString());
+                    words.Answer = dr["Answer"].ToString();
                     result.Add(words);
                 }
             }

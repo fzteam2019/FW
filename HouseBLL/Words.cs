@@ -26,6 +26,11 @@ namespace Houses.BLL
             return dal.Add(words);
         }
 
+        public Words GetWord(string id)
+        {
+            return dal.GetWord(id);
+        }
+
         public int UpdateReply(string wordId, string reply)
         {
             return dal.UpdateReply(wordId, reply);
